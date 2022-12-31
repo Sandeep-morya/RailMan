@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Stack,
   Flex,
@@ -29,13 +29,17 @@ import { useNavigate } from "react-router-dom";
 const PnrResult = ({ data }) => {
   const theme = useContext(MyTheme);
   const navigate=useNavigate();
-  const sendData=(data)=>{
+  
+  const sendData=()=>{
     theme.handleData(data)
-    navigate('/trianRute')
+    setTimeout(() => {
+      navigate('/trainRoute')
+    }, 1000);
   }
   if (!data?.boardingInfo) {
     return <></>;
   }
+
   return (
     <Stack w="full">
       <SimpleGrid w="full" columns={[1,3]} placeItems="center">

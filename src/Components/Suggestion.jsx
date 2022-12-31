@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Heading,Stack, useColorMode } from '@chakra-ui/react'
+import { Stack, useColorMode } from '@chakra-ui/react'
 import { MyTheme } from '../Context/ThemeContext';
 const Suggestion = ({hidden,list,setterFuc}) => {
     const {colorMode}=useColorMode();

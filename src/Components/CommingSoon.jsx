@@ -1,6 +1,5 @@
 import { Image, Spacer, Stack } from '@chakra-ui/react'
 import React from 'react'
-import SetBg from './SetBg'
 import cms from '../Assets/progress.png'
 import { dummyArray } from '../JS/functions'
 const CommingSoon = () => {

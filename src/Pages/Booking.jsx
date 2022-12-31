@@ -11,7 +11,6 @@ import {
   Button,
   Spacer,
   Text,
-  HStack,
 } from "@chakra-ui/react";
 import FullSearchBox from "../Components/FullSearchBox";
 import { MyTheme } from "../Context/ThemeContext";
@@ -35,7 +34,11 @@ const Booking = () => {
   return (
     <VStack position="relative" paddingTop={"2rem"}>
       <SetBg url={IndiaGateImage} altText={"indiagateImage"} />
-      <Flex w="90%" justifyContent="space-between"  direction={['column','row']}>
+      <Flex
+        w="90%"
+        justifyContent="space-between"
+        direction={["column", "row"]}
+      >
         <Stack
           align="center"
           bg={colorMode === "light" ? theme.light : theme.dark}
@@ -102,7 +105,7 @@ const Booking = () => {
           p="1rem"
           borderRadius=".5rem"
         >
-          <Stack justifyContent="space-between"  direction={['column','row']}>
+          <Stack justifyContent="space-between" direction={["column", "row"]}>
             {dummyArray(6, "btn").map((e, i) => (
               <Button
                 p="1.5rem"

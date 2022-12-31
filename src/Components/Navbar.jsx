@@ -1,4 +1,4 @@
-import { Center, Button, background, Link } from "@chakra-ui/react";
+import { Center, Button, Link } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

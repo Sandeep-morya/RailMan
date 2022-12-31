@@ -4,6 +4,11 @@ import { MyTheme } from '../Context/ThemeContext'
 
 const TrainRoute = () => {
     const theme= useContext(MyTheme);
+    const data=theme.data;
+    if(!theme.data.trainRoutes){
+      return <> Train Route  Not Found</>
+    }
+  
   return (
     <TableContainer w='full'>
         <Table>
@@ -20,7 +25,7 @@ const TrainRoute = () => {
             </Tr>
           </Thead>
           <Tbody>
-            {theme?.data?.trainRoutes.map((e,i)=>(<Tr key={i+e.stationId}>
+            {data?.trainRoutes.map((e,i)=>(<Tr key={i+e.stationId+Math.random()}>
                 <Td textAlign='center'>{i+1}</Td>
                 <Td>{e.stationName}</Td>
                 <Td>{i===0?'Start':e.arrivalTime.slice(0,5)}</Td>

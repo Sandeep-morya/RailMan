@@ -1,14 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import {
   VStack,
-  HStack,
   Center,
   Input,
   Button,
   useColorMode,
   Stack,
   Box,
-  Text,
 } from "@chakra-ui/react";
 import SetBg from "../Components/SetBg";
 import trainBetween from "../Assets/train_between.jpg";
