@@ -14,7 +14,7 @@ const FullSearchBox = ({type, len, placeholder, val, handleQuery }) => {
   };
   const theme = React.useContext(MyTheme);
   return (
-    <InputGroup w={len ? len : "25rem"}>
+    <InputGroup w={len ? len : ['full',"25rem"]}>
       <InputLeftElement
         pointerEvents="none"
         color={theme.primary}

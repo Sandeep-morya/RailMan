@@ -41,7 +41,7 @@ const Header = () => {
     <Center
       display="flex"
       justifyContent="space-between"
-      direction="row"
+      flexDirection={['column','row']}
       w="full"
       p=".5rem"
     >
@@ -52,7 +52,7 @@ const Header = () => {
         </Center>
       </NavLink>
       <Box>
-        <SearchBox />
+        <SearchBox/>
       </Box>
 
       <HStack>

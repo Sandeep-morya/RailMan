@@ -8,7 +8,7 @@ const TopComp = () => {
  const theme = useContext(MyTheme);
   return (
     <Container maxW="100%" bg={colorMode === 'light' ? theme.light : theme.dark}>
-      <Box w="90%" m="auto">
+      <Box w={['full','90%']} m="auto">
         <Header />
         <Divider />
         <Navbar />

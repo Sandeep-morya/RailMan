@@ -21,6 +21,7 @@ import { getMonthName, swichQuery } from "../JS/functions";
 import { dummyArray } from "../JS/functions";
 import { getNextDay } from "../JS/functions";
 import { getDayName } from "../JS/functions";
+import CommingSoon from "../Components/CommingSoon";
 
 const Booking = () => {
   const { colorMode } = useColorMode();
@@ -34,7 +35,7 @@ const Booking = () => {
   return (
     <VStack position="relative" paddingTop={"2rem"}>
       <SetBg url={IndiaGateImage} altText={"indiagateImage"} />
-      <Flex w="90%" justifyContent="space-between">
+      <Flex w="90%" justifyContent="space-between"  direction={['column','row']}>
         <Stack
           align="center"
           bg={colorMode === "light" ? theme.light : theme.dark}
@@ -101,7 +102,7 @@ const Booking = () => {
           p="1rem"
           borderRadius=".5rem"
         >
-          <HStack justifyContent="space-between">
+          <Stack justifyContent="space-between"  direction={['column','row']}>
             {dummyArray(6, "btn").map((e, i) => (
               <Button
                 p="1.5rem"
@@ -119,9 +120,10 @@ const Booking = () => {
                 </Text>
               </Button>
             ))}
-          </HStack>
+          </Stack>
         </Stack>
       </Flex>
+      <CommingSoon />
     </VStack>
   );
 };

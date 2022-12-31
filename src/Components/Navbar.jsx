@@ -33,6 +33,7 @@ const Navbar = () => {
     <Center
       display="flex"
       justifyContent="space-between"
+      flexDirection={['column','row']}
       m="auto"
       w="full"
       p="1rem .7rem"

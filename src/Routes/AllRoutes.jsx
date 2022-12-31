@@ -8,6 +8,7 @@ import LiveSattion from "../Pages/LiveStaion";
 import PnrEnquiry from "../Pages/PnrEnquiry";
 import RunningStatus from "../Pages/RunningStatus";
 import TrainBetween from "../Pages/TrainBetween";
+import TrainRoute from "../Components/TrainRoute";
 
 const AllRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AllRoutes = () => {
       <Route path='/coach_position' element={<CoachPosition />} />
       <Route path="/booking" element={<Booking/>}/>
       <Route path="/auth" element={<Auth />}/>
+      <Route path='/trainRoute' element={<TrainRoute />}/>
     </Routes>
   );
 };

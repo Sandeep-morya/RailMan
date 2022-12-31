@@ -13,6 +13,7 @@ const Suggestion = ({hidden,list,setterFuc}) => {
             left="10%"
             borderRadius=".5rem"
             hidden={hidden}
+            zIndex='2'
             boxShadow="0 0 5px grey"
             bg={colorMode === "light" ? theme.light : theme.dark}
           >

@@ -40,7 +40,7 @@ const SearchBox = () => {
           />
           <Input
             focusBorderColor="rgb(238,175,0)"
-            w="lg"
+            w={['full','lg']}
             size="lg"
             fontSize="1.1rem"
             variant={colorMode === "light" ? "filled" : "outline"}

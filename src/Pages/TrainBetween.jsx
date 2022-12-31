@@ -23,6 +23,7 @@ import { MyTheme } from "../Context/ThemeContext";
 import { getNextDay } from "../JS/functions";
 import { getStaions } from "../JS/api";
 import Suggestion from "../Components/Suggestion";
+import CommingSoon from "../Components/CommingSoon";
 
 const TrainBetween = () => {
   const { colorMode } = useColorMode();
@@ -78,10 +79,12 @@ const TrainBetween = () => {
   return (
     <VStack position="relative">
       <SetBg url={trainBetween} altText={"lalkila"} />
-      <HStack
+      <Stack
         padding="1rem"
         borderRadius=".5rem"
         bg={colorMode === "light" ? theme.light : theme.dark}
+        direction={['column','row']}
+        w={['95%','80%']}
       >
         <Box position="relative">
           <FullSearchBox
@@ -143,7 +146,8 @@ const TrainBetween = () => {
         >
           Search
         </Button>
-      </HStack>
+      </Stack>
+      <CommingSoon />
     </VStack>
   );
 };

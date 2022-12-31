@@ -57,7 +57,7 @@ const PnrEnquiry = () => {
         <Alert
           bg={colorMode === "light" ? theme.light : theme.dark}
           borderRadius=".5rem"
-          w="25%"
+          w={['95%',"25%"]}
           status="warning"
         >
           <AlertIcon />
@@ -68,13 +68,14 @@ const PnrEnquiry = () => {
         dummyArray(10, "spacer").map((e, i) => <Spacer key={e + i} />)
       )}
       <Flex
-        w="80%"
+        w={['full','80%']}
         p="1rem"
         borderRadius=".3rem"
+        direction={['column','row']}
         bg={colorMode === "light" ? theme.light : theme.dark}
       >
         <FullSearchBox
-          len={"85%"}
+          len={['full','85%']}
           placeholder="Enter Your 10 Digit PNR Number"
           val={theme.pnr}
           handleQuery={(e) => theme.handleText(e)}

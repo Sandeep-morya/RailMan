@@ -6,6 +6,7 @@ import {
   TabList,
   TabPanels,
   TabPanel,
+  Stack,
   HStack,
   Center,
   Button,
@@ -50,7 +51,7 @@ function TabComp() {
       w="90%"
       boxShadow="0 0 1rem black"
     >
-      <TabList w="full" display="grid" gridTemplateColumns="1fr 1fr 1fr">
+      <TabList w="full" display="grid" gridTemplateColumns={['1fr','1fr 1fr 1fr']}>
         {tabData.map((e, i) => (
           <Tab fontWeight="500" key={e + i}>
             <Container>
@@ -63,7 +64,7 @@ function TabComp() {
       </TabList>
       <TabPanels>
         <TabPanel>
-          <HStack>
+          <Stack direction={['column','row']}>
             <FullSearchBox
               val={query.origin}
               handleQuery={(e) => setQuery({ ...query, origin: e })}
@@ -106,16 +107,17 @@ function TabComp() {
               <Button
                 leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
                 bg={theme.primary}
+                w='full'
                 variant="solid"
                 onClick={() => theme.handleBookingQuery(query)}
               >
                 Search
               </Button>
             </NavLink>
-          </HStack>
+          </Stack>
         </TabPanel>
         <TabPanel>
-          <Flex>
+          <Flex direction={['column','row']}>
             <FullSearchBox
               len={"90%"}
               placeholder="Enter Train Name or Number"
@@ -128,6 +130,7 @@ function TabComp() {
                 leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
                 colorScheme={theme.schema}
                 variant="solid"
+                w='full'
               >
                 Search
               </Button>
@@ -135,7 +138,7 @@ function TabComp() {
           </Flex>
         </TabPanel>
         <TabPanel>
-          <Flex>
+          <Flex  direction={['column','row']}>
             <FullSearchBox
               len={"90%"}
               placeholder="Enter Train Name or Number"
@@ -148,6 +151,7 @@ function TabComp() {
                 leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
                 colorScheme={theme.schema}
                 variant="solid"
+                w='full'
               >
                 Search
               </Button>

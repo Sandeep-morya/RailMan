@@ -4,6 +4,7 @@ import { getNextDay } from "../JS/functions";
 export const MyTheme = createContext();
 const ThemeContextProvider = ({ children }) => {
   const [pnr, setPnr] = useState("");
+  const [data,setData] =useState({});
 
   const [bookigQuery, setBookingQuery] = useState({
     origin: "",
@@ -30,6 +31,8 @@ const ThemeContextProvider = ({ children }) => {
     handleRunningQuery: (e) => setRunningQuery(e),
     coachQuery,
     handleCoachQuery: (e) => setCoachQuery(e),
+    data,
+    handleData:(e)=>setData(e),
   };
   return <MyTheme.Provider value={theme}>{children}</MyTheme.Provider>;
 };

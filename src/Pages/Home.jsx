@@ -18,11 +18,11 @@ const Home = () => {
         />
         <Spacer />
         <Spacer />
-        <Heading size="lg" color={theme.fixedWhite}>
+        <Heading size={['sm','lg']} color={theme.fixedWhite}>
           IRCTC Authorized Parnter
         </Heading>
       </HStack>
-      <Heading p="2rem 0" paddingTop="0" size="3xl" color={theme.fixedWhite}>
+      <Heading p="2rem 0" paddingTop="0" size={['lg','3xl']} color={theme.fixedWhite}>
         EASY TRAIN TICKET BOOKING
       </Heading>
       <TabComp />
