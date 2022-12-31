@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  color: rgb(238, 175, 0);
+}
+body {
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  width: 50%;
+  background-color: rgb(238, 175, 0);
+  border-radius: 3em;
+  height: 20px;
+}
+th {
+  background-color: rgba(238,175,0,0.7);
+}
+td,tr{
+  text-align: center;
+}
+*{
+  font-family: 'Quicksand', sans-serif !important;
+}
